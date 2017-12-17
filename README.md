@@ -37,5 +37,6 @@ En esta aplicación se han implementado las sisguientes funcionalidades:
 #### Invite Links
 * Links de invitación a la App.
 
-Descubre más sobre el proyecto en la memoria: [(Memoria)](https://github.com/DrassApps/Firebase/blob/master/MemoriaFirebase.pdf)
-O en la siguiente presentación: [(Presentacin)](https://prezi.com/p/rb5hc6tknnaf/)
+Descubre más sobre el proyecto en la memoria: [Memoria](https://github.com/DrassApps/Firebase/blob/master/MemoriaFirebase.pdf)
+
+O en la siguiente presentación: [Presentación](https://prezi.com/p/rb5hc6tknnaf/)
