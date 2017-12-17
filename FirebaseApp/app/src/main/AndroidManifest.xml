@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.drassapps.firebaseapp">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".RegistroEmailFirebase"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".RegistroGoogleFirebase"/>
+        <activity android:name=".RegistroFacebookFirebase"/>
+        <activity android:name=".RegistroTwitterFirebase"/>
+        <activity android:name=".AlmacenamientoFirebase"/>
+        <activity android:name=".BDFirebase"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".NotificacionPushFirebase"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".CrashlyticsFirebase"/>
+        <activity android:name=".AdMobFirebase"/>
+        <activity android:name=".RegistroTelefonoFirebase"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity android:name=".InviteLinkFirebase"/>
+
+        <!-- SDK de Facebook aquí le pasamos las claves -->
+        <meta-data android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id"/>
+
+        <activity android:name="com.facebook.FacebookActivity"
+            android:configChanges=
+                "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+
+
+        <!-- Servicios para el Cloud Messaging de Firebase -->
+
+        <service
+            android:name=".MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <service
+            android:name=".MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+
+        <!-- Configuramos la notificaciçon, tanto el color como el iciono (sera el de la app)-->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/firebase" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@android:color/transparent" />
+
+    </application>
+</manifest>

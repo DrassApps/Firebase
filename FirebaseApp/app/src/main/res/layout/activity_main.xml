@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Contenedor global par contener el NavView (Vista de la Actvidad principal de la App)-->
+<android.support.v4.widget.DrawerLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:fitsSystemWindows="true"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.design.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:id="@+id/lay_main"
+        tools:context="com.drassapps.agenda.AddContacto"
+        android:background="@color/back_color">
+
+        <!--Layout principal de la vista-->
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/White"
+            android:orientation="vertical"
+            android:id="@+id/lay_main1"
+            tools:context="com.drassapps.agenda.MainActivity">
+
+            <!--Creación de la Toolbar para las funcionalidades extras-->
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/my_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                <ImageView
+                    android:id="@+id/menu_nav"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="left"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_menu_white_48dp" />
+
+
+            </android.support.v7.widget.Toolbar>
+
+            <!--Dummy Lay para que nose focusee el inpunt de la toolbar-->
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@+id/dummy_line"
+                    android:focusable="true"
+                    android:orientation="vertical"
+                    android:focusableInTouchMode="true"
+                    android:layout_width="0px"
+                    android:layout_height="0px"/>
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/icon"
+                    style="@style/ThemeOverlay.FirebaseIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="300dp"
+                    android:contentDescription="@string/desc_firebase_lockup"
+                    android:src="@drawable/firebaseimg" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="76dp"
+                    android:theme="@style/ThemeOverlay.MyTitleText"
+                    android:text="Andrés Micó Millán" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <!-- Layout del menú lateral (Navigation View) -->
+    <android.support.design.widget.NavigationView
+        android:id="@+id/navview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:layout_gravity="start"
+        android:background="@android:color/transparent"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/nav_menu">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- Contenedor General de la vista -->
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="700dp"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:orientation="vertical"
+                android:background="@color/boton_numero"
+                xmlns:android="http://schemas.android.com/apk/res/android">
+
+                <!-- ImageView que permite cerra el nav -->
+                <ImageView
+                    android:id="@+id/bt_menu_nav"
+                    android:layout_width="40dp"
+                    android:src="@drawable/ic_chevron_right_white_48dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginLeft="235dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <!-- Linear FireBase -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:onClick="mainView"
+                    android:background="@color/boton_numero">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/firebase"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:textColor="@color/White"
+                        android:id="@+id/text_menu_0"
+                        android:textSize="30dp"
+                        android:gravity="center"
+                        android:text="@string/menu_firebase"
+                        android:layout_gravity="center" />
+                </LinearLayout>
+
+                <!-- Separador -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/White"/>
+
+                <!-- Linear info etiqueta -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:id="@+id/linear">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@android:color/white"
+                        android:id="@+id/text_menu"
+                        android:textSize="25dp"
+                        android:gravity="center"
+                        android:text="@string/menu_aute"
+                        android:layout_gravity="center" />
+                </LinearLayout>
+
+
+                <!-- Linear Email -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:id="@+id/linear_1"
+                    android:onClick="registroEmailView">
+
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="28dp"
+                        android:src="@drawable/bc_email"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="52dp"
+                        android:textColor="@android:color/white"
+                        android:id="@+id/text_menu_1"
+                        android:textSize="20dp"
+                        android:gravity="center"
+                        android:text="@string/menu_email"
+                        android:layout_gravity="center" />
+                </LinearLayout>
+
+                <!-- Linear Telefono -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
+                    android:orientation="horizontal"
+                    android:id="@+id/linear_11"
+                    android:onClick="registroTelefonoView">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="30dp"
+                        android:src="@drawable/telf"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="52dp"
+                        android:textColor="@android:color/white"
+                        android:id="@+id/text_menu_11"
+                        android:textSize="20dp"
+                        android:gravity="center"
+                        android:text="@string/menu_telf"
+                        android:layout_gravity="center" />
+                </LinearLayout>
+
+
+                <!-- Linear Google -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="15dp"
+                    android:id="@+id/linear_2"
+                    android:onClick="registroGoogleView"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-50dp"
+                        android:src="@drawable/bc_google"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-25dp"
+                        android:textColor="@android:color/white"
+                        android:id="@+id/text_menu_2"
+                        android:textSize="20dp"
+                        android:gravity="center"
+                        android:text="@string/menu_google"
+                        android:layout_gravity="center" />
+                </LinearLayout>
+
+                <!-- Linear Faceebook -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/linear_3"
+                    android:background="@color/boton_numero"
+                    android:onClick="registroFacebookView"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-50dp"
+                        android:src="@drawable/bc_facebook"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-25dp"
+                        android:textColor="@android:color/white"
+                        android:id="@+id/text_menu_3"
+                        android:textSize="20dp"
+                        android:gravity="center"
+                        android:text="@string/menu_facebook"
+                        android:layout_gravity="center" />
+                </LinearLayout>
+
+                <!-- Linear Twitter -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/linear_4"
+                    android:onClick="registroTwitterView"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-50dp"
+                        android:src="@drawable/bc_twitter"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-25dp"
+                        android:textColor="@android:color/white"
+                        android:id="@+id/text_menu_4"
+                        android:textSize="20dp"
+                        android:gravity="center"
+                        android:text="@string/menu_twitter"
+                        android:layout_gravity="center" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/White"/>
+
+                <!-- Linear info etiqueta 2 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:id="@+id/linear_5">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@android:color/white"
+                        android:id="@+id/text_men_5"
+                        android:textSize="25dp"
+                        android:gravity="center"
+                        android:text="@string/menu_utilidades"
+                        android:layout_gravity="center" />
+                </LinearLayout>
+
+                <!-- Notificacion Push -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/linear_6"
+                    android:onClick="notificacionPush"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-50dp"
+                        android:src="@drawable/noti"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-25dp"
+                        android:textColor="@android:color/white"
+                        android:id="@+id/text_menu_6"
+                        android:textSize="20dp"
+                        android:gravity="center"
+                        android:text="@string/menu_noti"
+                        android:layout_gravity="center" />
+                </LinearLayout>
+
+                <!-- BD -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/linear_7"
+                    android:onClick="bdFirebase"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-50dp"
+                        android:src="@drawable/db"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-25dp"
+                        android:textColor="@android:color/white"
+                        android:id="@+id/text_menu_7"
+                        android:textSize="20dp"
+                        android:gravity="center"
+                        android:text="@string/menu_bd"
+                        android:layout_gravity="center" />
+                </LinearLayout>
+
+                <!-- Almacenamineto -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/linear_8"
+                    android:onClick="almacenamientoFirebase"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-50dp"
+                        android:src="@drawable/dir"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-25dp"
+                        android:textColor="@android:color/white"
+                        android:id="@+id/text_menu_8"
+                        android:textSize="20dp"
+                        android:gravity="center"
+                        android:text="@string/menu_alma"
+                        android:layout_gravity="center" />
+                </LinearLayout>
+
+                <!-- Crashlytics -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/linear_9"
+                    android:onClick="crashlyticsFirebase"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-50dp"
+                        android:src="@drawable/crashlytics"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-25dp"
+                        android:textColor="@android:color/white"
+                        android:id="@+id/text_menu_9"
+                        android:textSize="20dp"
+                        android:gravity="center"
+                        android:text="@string/menu_crash"
+                        android:layout_gravity="center" />
+                </LinearLayout>
+
+                <!-- AdMob -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/linear_10"
+                    android:onClick="admobFirebase"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-50dp"
+                        android:src="@drawable/admob"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-25dp"
+                        android:textColor="@android:color/white"
+                        android:id="@+id/text_menu_10"
+                        android:textSize="20dp"
+                        android:gravity="center"
+                        android:text="@string/menu_admob"
+                        android:layout_gravity="center" />
+                </LinearLayout>
+
+                <!-- InviteLinks -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="20dp"
+                    android:id="@+id/linear_12"
+                    android:onClick="inviteLinksFirebase"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-50dp"
+                        android:src="@drawable/firebaseinvite"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-25dp"
+                        android:textColor="@android:color/white"
+                        android:id="@+id/text_menu_12"
+                        android:textSize="20dp"
+                        android:gravity="center"
+                        android:text="@string/menu_invite"
+                        android:layout_gravity="center" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </android.support.design.widget.NavigationView>
+
+</android.support.v4.widget.DrawerLayout>

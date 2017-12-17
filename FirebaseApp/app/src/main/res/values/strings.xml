@@ -1,0 +1,139 @@
+<resources>
+    <string name="app_name">FirebaseApp</string>
+
+    <!-- KEY GOOGLE SING IN -->
+    <string name="API_KEY_BackEnd">724177974107-vofh0b938rifkl8p1ah3d0kh7emdvdfp.apps.googleusercontent.com</string>
+    <!-- -->
+
+    <!-- KEYs FACEBOOK DEVELOPER -->
+    <string name="facebook_app_id">1499383623464404</string>
+    <string name="fb_login_protocol_scheme">fb1499383623464404</string>
+
+    <!-- KEYs TWITTER DEVELOPER -->
+    <string name="twitter_id">nVvAb7dHZzz9tHcALGTLbUKCy</string>
+    <string name="twitter_key">fJovz09IpjyGXkP1hVf2yA2My2xRV57Dw9IYz0e9pWjUohrzoT</string>
+
+    <!-- Habilitado los Crashes -->
+    <string name="com.crashlytics.useFirebaseAppId">true</string>
+
+    <!-- KEYs ADMOB test -->
+    <string name="appIDAdmob">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="appIDAdmobInter">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="appIDAdmobVideo">ca-app-pub-3940256099942544/5224354917</string>
+
+    <!-- General -->
+    <string name="menu_firebase">Firebase</string>
+    <string name="menu_aute">Autentificaión</string>
+    <string name="menu_email">Email</string>
+    <string name="menu_telf">Teléfono</string>
+    <string name="menu_google">Google</string>
+    <string name="menu_facebook">Facebook</string>
+    <string name="menu_twitter">Twitter</string>
+    <string name="menu_utilidades">Utilidades</string>
+    <string name="menu_noti">Notificaciones</string>
+    <string name="menu_bd">Base de Datos</string>
+    <string name="menu_alma">Almacenamiento</string>
+    <string name="menu_crash">Crashlytics</string>
+    <string name="menu_invite">Invite Links</string>
+    <string name="menu_admob">AdMob</string>
+    <string name="firebase_status_fmt">Usuario en Firebase: %s</string>
+    <string name="emailVerificado">Sí</string>
+    <string name="emailNoVerificado">No</string>
+    <string name="sesion_abierta">Conectado</string>
+    <string name="sesion_cerrada">Sesión cerrada</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Contraseña</string>
+    <string name="button_name_login">Iniciar Sesión</string>
+    <string name="button_name_create">Crear Cuenta</string>
+    <string name="button_name_logout">Cerrar Sesión</string>
+    <string name="button_name_verify">Verificar Email</string>
+    <string name="button_cam_pass">Cambiar Contraseña</string>
+    <string name="verificar">Verificar</string>
+
+    <!--Vista email Auth -->
+    <string name="emailpassword_status_fmt">Email del usuario: %1$s (verificado: %2$s)</string>
+    <string name="emailpassword_title_text">Email y Contraseña</string>
+    <string name="textVerificar">Le vamos a enviar un correo a su email para verificar su
+        cuenta.</string>
+
+    <!-- Vista telf Auth -->
+    <string name="phone_title_text">Autentificación por teléfono</string>
+    <string name="reenviarPhone">Reenviar</string>
+    <string name="hint_phone">Número</string>
+    <string name="hint_code">Código de Verificación</string>
+    <string name="enviar">Enviar</string>
+    <string name="phone_tfm">Teléfono de registro: %s</string>
+
+    <!-- Vista Facebook Auth -->
+    <string name="facebook_status_fmt">Usuario de Facebook: %s</string>
+    <string name="facebook_singin_err">Error en el registro</string>
+    <string name="facebook_text">Facebook Login</string>
+
+    <!-- Vista GoogleSingIn Auth -->
+    <string name="google_title_text">Google Sign In</string>
+    <string name="google_status_fmt">Usuario de Google: %s</string>
+    <string name="google_err">Error al recoger los datos</string>
+
+    <!-- Vista Twitter Auth -->
+    <string name="twitter_title_text">Twitter Login</string>
+    <string name="twitter_status_fmt">Usuario de Twitter: %s</string>
+
+    <!-- Vista BD -->
+    <string name="error_text_bd">Introduce más de 3 letras</string>
+    <string name="null_data">Los datos son nulos</string>
+    <string name="error_leer_bd">Fallo al leer el valor</string>
+    <string name="token_usu_bd">Token de usuario</string>
+    <string name="hint_nombre">Nombre</string>
+    <string name="bt_modi">Modificar</string>
+    <string name="bd_text">BD en tiempo real</string>
+
+    <!-- Vist Almacenamiento -->
+    <string name="almacenamiento_text">Almacenamiento</string>
+    <string name="almacenamiento_info">Pulsa en la imagen para cambiarla</string>
+    <string name="error_pick_imagen">No has elegido ninguna imágen</string>
+    <string name="selec_imagen">Selecciona una imagen</string>
+    <string name="dwm_imagen">Descargando imagen</string>
+    <string name="err_imagen">Error al subir la imagen</string>
+    <string name="ok_imagen">Imagen subida correctamente</string>
+    <string name="subir_imagen">Subir</string>
+    <string name="descargar_imagen">Descargar</string>
+
+    <!-- Notifiacion Push -->
+    <string name="notifi_text">Notificación PUSH</string>
+    <string name="notifi_token">Token de usuario: </string>
+    <string name="hint_titulo">Titulo</string>
+    <string name="hint_mensaje">Mensaje</string>
+    <string name="notifi_send">Enviar Notificación</string>
+    <string name="ed_error">Rellene los campos</string>
+    <string name="network_error">No tienes conexión a Internet</string>
+
+    <!-- ADMOB -->
+    <string name="admob_text">AdMob</string>
+    <string name="admob_banner1">Banner</string>
+    <string name="admob_banner2">Intersticial</string>
+    <string name="admob_banner3">Recompensado</string>
+    <string name="admob_inicio">Reiniciar AdMob</string>
+
+    <!-- Crashlytics -->
+    <string name="crash_text">Crashlytics</string>
+    <string name="bt_crash">Generar Crash</string>
+    <string name="cuidado">Cuidado</string>
+    <string name="dialogText">Al pulsar sobre Sí , generarás un crash en la aplicación y así
+        probar la funcionalidad de Crashlytics.</string>
+    <string name="dialogText2">Vuelve a abrir la aplicación cuando se cierre.</string>
+
+    <!-- Invites -->
+    <string name="invitation_title">Hola</string>
+    <string name="invitation_message">Te invito a mi app</string>
+    <string name="invitation_deep_link">https://hw8fa.app.goo.gl/?link=http://drassapps.hol.es</string>
+    <string name="invitation_cta">Instala Ahora</string>
+    <string name="invitation_bt">Enviar invitación</string>
+    <string name="invitation_d1">Aviso</string>
+    <string name="invitation_d2">Vamos a enviar una invitacion de la app a tus contactos</string>
+
+    <!-- Extra -->
+    <string name="label_firebase_ui">FirebaseUI Auth</string>
+    <string name="desc_firebase_ui">Use the FirebaseUI-Android library to authenticate with Firebase.</string>
+    <string name="desc_firebase_lockup">Firebase logo and name</string>
+
+</resources>
