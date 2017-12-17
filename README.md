@@ -1,7 +1,6 @@
 # Firebase
-Aplicacion Android que muestra las funcionalidades de Firebase
 
-La aplicación en Android muestra la implementación de diferentes herramientas y funcionalidades que ofrece Firebase. Firebase es una plataforma de desarrollo en la nube, que nos facilita APIs y herramientas para potenciar nuestras aplicaciones móviles.
+La aplicación en Android muestra la implementación de diferentes herramientas y funcionalidades que ofrece Firebase, siendo una plataforma de desarrollo en la nube propiedad de Google, que nos facilita APIs y herramientas para potenciar nuestras aplicaciones móviles.
 
 En esta aplicación se han implementado las sisguientes funcionalidades:
 
@@ -14,7 +13,7 @@ En esta aplicación se han implementado las sisguientes funcionalidades:
 
 #### Notificaciones PUSH.
 * A través de la consola que nos ofrece Firebase.
-* A través de la app (nos enviamos una notificacin).
+* A través de la app (nos enviamos una notificación).
 * A través de un BackEnd desarrollado AdHoc para el proyecto.
 
 #### Analytics
@@ -27,16 +26,17 @@ En esta aplicación se han implementado las sisguientes funcionalidades:
 * Uso del almacenamiento de Firebase para alojar imágenes, música, PDFs...
 
 #### Admob
-* Implementación de distintos tipos de Banners publicitarios
-* Banners en la parte de abajo
-* Banners en pantalla completa (Intersticial)
+* Implementación de distintos tipos de Banners publicitarios.
+* Banners en la parte de abajo.
+* Banners de pantalla completa (Intersticial)
 * Videos recompensados.
 
 #### Crashlytics
-* Implementación de crashlytics, lo que supone un informe enviado a nuestro email sobre el crash que ha ocurrido en la aplicación,
+* Implementación de crashlytics, lo que supone un informe enviado a nuestro email sobre el crash que ha ocurrido en la aplicación.
 
 #### Invite Links
 * Links de invitación a la App.
 
 Descubre más sobre el proyecto en la memoria: Memoria
+
 O en la siguiente presentación: Presentación
